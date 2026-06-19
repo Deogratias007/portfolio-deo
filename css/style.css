@@ -1471,10 +1471,16 @@ img {
   flex-shrink: 0;
 }
 
-.icon-wa    { background: rgba(37, 211, 102, 0.1); }
-.icon-email { background: rgba(79, 142, 247, 0.1); }
+.contact-icon::before,
+.contact-icon::after {
+  content: none;
+  display: none;
+}
+
+.contact-wa    { background: rgba(37, 211, 102, 0.1); }
+.contact-email { background: rgba(79, 142, 247, 0.1); }
 .icon-github { background: rgba(255, 255, 255, 0.08); }
-.icon-loc   { background: rgba(139, 92, 246, 0.1); }
+.contact-loc   { background: rgba(139, 92, 246, 0.1); }
 
 .contact-link-label {
   font-size: 0.73rem;
