@@ -1240,6 +1240,15 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .about-card {
+    text-align: center;
+  }
+
+  .about-card-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
