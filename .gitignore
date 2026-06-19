@@ -1,0 +1,4 @@
+.agents/
+.codex/
+.empty-git-template/
+{css,js,images}/
