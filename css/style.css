@@ -1240,6 +1240,29 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .about-left {
+    text-align: center;
+  }
+
+  .about-left .section-tag {
+    text-align: center;
+  }
+
+  .avatar {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-desc {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .about-tags {
+    justify-content: center;
+  }
+
   .about-card {
     text-align: center;
   }
