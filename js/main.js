@@ -7,6 +7,12 @@
    1. Navbar — ombre au scroll
 ----------------------------------------------- */
 const navbar = document.getElementById('navbar');
+const hero = document.querySelector('.hero');
+const heroTitle = document.querySelector('.hero-title');
+
+const scrollProgress = document.createElement('div');
+scrollProgress.className = 'scroll-progress';
+document.body.prepend(scrollProgress);
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 30) {
@@ -50,11 +56,74 @@ const observer = new IntersectionObserver((entries) => {
 
 /* Éléments à animer */
 document.querySelectorAll(
-  '.service-card, .project-card, .about-card, .skill-card, .journey-card, .contact-card, .hero-stats .stat'
+  '.section > .section-tag, .section > .section-title, .section > .section-sub, .service-card, .project-card, .about-card, .skill-card, .journey-card, .contact-card, .hero-stats .stat'
 ).forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
+
+
+/* -----------------------------------------------
+   4. Hero premium - reveal, gradient et parallaxe
+----------------------------------------------- */
+function wrapAnimatedLetters(root) {
+  if (!root) return;
+
+  let index = 0;
+  const wrapNode = (node) => {
+    const fragment = document.createDocumentFragment();
+
+    Array.from(node.textContent).forEach(char => {
+      if (char === ' ') {
+        fragment.appendChild(document.createTextNode(' '));
+        return;
+      }
+
+      const span = document.createElement('span');
+      span.className = 'char';
+      span.style.setProperty('--char-index', index);
+      span.textContent = char;
+      index += 1;
+      fragment.appendChild(span);
+    });
+
+    node.replaceWith(fragment);
+  };
+
+  Array.from(root.childNodes).forEach(node => {
+    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+      wrapNode(node);
+    }
+
+    if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('accent')) {
+      Array.from(node.childNodes).forEach(child => {
+        if (child.nodeType === Node.TEXT_NODE && child.textContent.trim()) {
+          wrapNode(child);
+        }
+      });
+    }
+  });
+}
+
+wrapAnimatedLetters(heroTitle);
+
+requestAnimationFrame(() => {
+  document.body.classList.add('loaded');
+});
+
+if (hero && heroTitle && window.matchMedia('(pointer: fine)').matches) {
+  hero.addEventListener('mousemove', (event) => {
+    const rect = hero.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 10;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 8;
+
+    heroTitle.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    heroTitle.style.transform = '';
+  });
+}
 
 
 /* -----------------------------------------------
@@ -100,6 +169,10 @@ function requestTick() {
 }
 
 function updateAnimations() {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+
+  scrollProgress.style.width = `${Math.min(progress, 100)}%`;
   ticking = false;
 }
 

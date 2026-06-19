@@ -159,6 +159,354 @@ body::before {
   transform: translateY(0);
 }
 
+/* Premium overrides kept last so older card rules do not win. */
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  filter: blur(10px);
+  transition:
+    opacity 0.75s var(--ease-premium),
+    transform 0.75s var(--ease-premium),
+    filter 0.75s var(--ease-premium);
+  will-change: opacity, transform, filter;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.025);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.about-card:hover,
+.skill-card:hover,
+.journey-card:hover,
+.hero-stats .stat:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(79,142,247,0.48);
+  box-shadow: 0 20px 44px rgba(79,142,247,0.16);
+}
+
+.btn:hover,
+.nav-cta:hover,
+.service-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(79,142,247,0.24), 0 0 0 1px rgba(79,142,247,0.22);
+}
+
+@media (max-width: 560px), (prefers-reduced-motion: reduce) {
+  .fade-in {
+    filter: none;
+  }
+
+  .btn:hover,
+  .nav-cta:hover,
+  .service-btn:hover,
+  .about-card:hover,
+  .skill-card:hover,
+  .journey-card:hover,
+  .project-card:hover,
+  .service-card:hover {
+    transform: none;
+  }
+}
+
+
+/* -----------------------------------------------
+   13. PREMIUM UI MOTION LAYER
+----------------------------------------------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  z-index: 200;
+  background: linear-gradient(90deg, rgba(79,142,247,0.2), var(--accent), rgba(139,92,246,0.7));
+  box-shadow: 0 0 18px rgba(79,142,247,0.45);
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: radial-gradient(circle at 50% 20%, black, transparent 70%);
+}
+
+body::before {
+  animation: premiumBgDrift 16s var(--ease-premium) infinite alternate;
+}
+
+@keyframes premiumBgDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-18px, 12px, 0) scale(1.03);
+    filter: hue-rotate(10deg);
+  }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(79,142,247,0.12), transparent 34%),
+    radial-gradient(circle at 15% 72%, rgba(139,92,246,0.08), transparent 34%),
+    linear-gradient(180deg, rgba(79,142,247,0.04), transparent 58%);
+  animation: heroAura 12s var(--ease-premium) infinite alternate;
+}
+
+@keyframes heroAura {
+  0% { opacity: 0.55; transform: translateY(0); }
+  100% { opacity: 0.95; transform: translateY(-16px); }
+}
+
+.hero-glow {
+  animation: heroGlowPulse 7s var(--ease-premium) infinite alternate;
+}
+
+@keyframes heroGlowPulse {
+  0% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+.hero-tag,
+.hero-title,
+.hero-sub,
+.hero-btns,
+.hero-stats {
+  opacity: 0;
+  transform: translateY(18px);
+  filter: blur(10px);
+  transition:
+    opacity 0.9s var(--ease-premium),
+    transform 0.9s var(--ease-premium),
+    filter 0.9s var(--ease-premium);
+}
+
+body.loaded .hero-tag,
+body.loaded .hero-title,
+body.loaded .hero-sub,
+body.loaded .hero-btns,
+body.loaded .hero-stats {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+body.loaded .hero-tag { transition-delay: 0.08s; }
+body.loaded .hero-title { transition-delay: 0.2s; }
+body.loaded .hero-sub { transition-delay: 0.34s; }
+body.loaded .hero-btns { transition-delay: 0.48s; }
+body.loaded .hero-stats { transition-delay: 0.62s; }
+
+.hero-title {
+  will-change: transform;
+  text-shadow: 0 0 42px rgba(79,142,247,0.08);
+}
+
+.hero-title .accent {
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(90deg, #78a9ff, #ffffff, #4F8EF7, #9b7cff, #78a9ff);
+  background-size: 260% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 0 18px rgba(79,142,247,0.18));
+  animation: titleGradientMove 5.8s linear infinite;
+}
+
+@keyframes titleGradientMove {
+  to { background-position: 260% center; }
+}
+
+.hero-title .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(18px) rotateX(18deg);
+  filter: blur(8px);
+  animation: letterReveal 0.72s var(--ease-premium) forwards;
+  animation-delay: calc(var(--char-index) * 24ms + 0.28s);
+}
+
+@keyframes letterReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+    filter: blur(0);
+  }
+}
+
+.btn,
+.nav-cta,
+.service-btn,
+.contact-link {
+  transition:
+    transform 0.35s var(--ease-premium),
+    border-color 0.35s var(--ease-premium),
+    background 0.35s var(--ease-premium),
+    color 0.35s var(--ease-premium),
+    box-shadow 0.35s var(--ease-premium);
+}
+
+.btn:hover,
+.nav-cta:hover,
+.service-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(79,142,247,0.24), 0 0 0 1px rgba(79,142,247,0.22);
+}
+
+.btn-primary,
+.nav-cta,
+.service-btn.filled {
+  box-shadow: 0 10px 28px rgba(79,142,247,0.16);
+}
+
+.section-title,
+.stat-num,
+.skill-name,
+.project-body h3,
+.journey-card h3 {
+  text-shadow: 0 0 30px rgba(79,142,247,0.08);
+}
+
+.section-sub,
+.about-desc,
+.about-card p,
+.skill-card p,
+.project-body p,
+.journey-card p,
+.contact-card > p,
+.service-features li {
+  color: #9a9a9a;
+}
+
+.service-card,
+.project-card,
+.about-card,
+.skill-card,
+.journey-card,
+.contact-card {
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+.project-card:hover,
+.skill-card:hover,
+.journey-card:hover,
+.contact-link:hover,
+.hero-stats .stat:hover {
+  box-shadow: 0 20px 44px rgba(79,142,247,0.16);
+}
+
+.about-card,
+.skill-card,
+.journey-card,
+.project-card,
+.service-card,
+.hero-stats .stat {
+  transition:
+    transform 0.35s var(--ease-premium),
+    border-color 0.35s var(--ease-premium),
+    box-shadow 0.35s var(--ease-premium),
+    background 0.35s var(--ease-premium);
+}
+
+.about-card:hover,
+.skill-card:hover,
+.journey-card:hover,
+.hero-stats .stat:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(79,142,247,0.48);
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.025);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(28px);
+  filter: blur(10px);
+  transition:
+    opacity 0.75s var(--ease-premium),
+    transform 0.75s var(--ease-premium),
+    filter 0.75s var(--ease-premium);
+  will-change: opacity, transform, filter;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (max-width: 560px), (prefers-reduced-motion: reduce) {
+  body::before,
+  .hero::before,
+  .hero-glow,
+  .hero-title .accent {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+
+  .hero-title .char {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  .hero-tag,
+  .hero-title,
+  .hero-sub,
+  .hero-btns,
+  .hero-stats,
+  .fade-in {
+    filter: none;
+  }
+
+  .btn:hover,
+  .nav-cta:hover,
+  .service-btn:hover,
+  .about-card:hover,
+  .skill-card:hover,
+  .journey-card:hover,
+  .project-card:hover,
+  .service-card:hover {
+    transform: none;
+  }
+}
+
 /* Lazy loading styles */
 img.lazy {
   opacity: 0;
@@ -196,6 +544,7 @@ img.lazy.loaded {
   --transition:    0.25s ease;
   --transition-fast:    0.15s ease;
   --transition-smooth:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-premium:  cubic-bezier(0.16, 1, 0.3, 1);
   --transition-bounce:  0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -218,6 +567,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
@@ -326,11 +676,13 @@ img {
   background: rgba(8, 8, 8, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  transition: box-shadow var(--transition);
+  transition: background var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
 }
 
 .navbar.scrolled {
-  box-shadow: 0 1px 20px rgba(0,0,0,0.5);
+  background: rgba(8, 8, 8, 0.72);
+  border-color: rgba(79, 142, 247, 0.18);
+  box-shadow: 0 14px 42px rgba(0,0,0,0.34), 0 0 28px rgba(79,142,247,0.08);
 }
 
 .nav-logo {
@@ -388,6 +740,7 @@ img {
   padding: 5rem 2rem 4rem;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
 /* Halo lumineux décoratif */
@@ -1311,11 +1664,58 @@ img {
 ----------------------------------------------- */
 .fade-in {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  transform: translateY(28px);
+  filter: blur(10px);
+  transition:
+    opacity 0.75s var(--ease-premium),
+    transform 0.75s var(--ease-premium),
+    filter 0.75s var(--ease-premium);
+  will-change: opacity, transform, filter;
 }
 
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.025);
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.about-card:hover,
+.skill-card:hover,
+.journey-card:hover,
+.hero-stats .stat:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(79,142,247,0.48);
+  box-shadow: 0 20px 44px rgba(79,142,247,0.16);
+}
+
+.btn:hover,
+.nav-cta:hover,
+.service-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(79,142,247,0.24), 0 0 0 1px rgba(79,142,247,0.22);
+}
+
+@media (max-width: 560px), (prefers-reduced-motion: reduce) {
+  .fade-in {
+    filter: none;
+  }
+
+  .btn:hover,
+  .nav-cta:hover,
+  .service-btn:hover,
+  .about-card:hover,
+  .skill-card:hover,
+  .journey-card:hover,
+  .project-card:hover,
+  .service-card:hover {
+    transform: none;
+  }
 }
