@@ -211,6 +211,7 @@ body::before {
   .service-btn:hover,
   .about-card:hover,
   .skill-card:hover,
+  .approach-card:hover,
   .journey-card:hover,
   .project-card:hover,
   .service-card:hover {
@@ -299,6 +300,7 @@ body::before {
 .hero-tag,
 .hero-title,
 .hero-sub,
+.hero-signature,
 .hero-btns,
 .hero-stats {
   opacity: 0;
@@ -313,6 +315,7 @@ body::before {
 body.loaded .hero-tag,
 body.loaded .hero-title,
 body.loaded .hero-sub,
+body.loaded .hero-signature,
 body.loaded .hero-btns,
 body.loaded .hero-stats {
   opacity: 1;
@@ -323,8 +326,9 @@ body.loaded .hero-stats {
 body.loaded .hero-tag { transition-delay: 0.08s; }
 body.loaded .hero-title { transition-delay: 0.2s; }
 body.loaded .hero-sub { transition-delay: 0.34s; }
-body.loaded .hero-btns { transition-delay: 0.48s; }
-body.loaded .hero-stats { transition-delay: 0.62s; }
+body.loaded .hero-signature { transition-delay: 0.44s; }
+body.loaded .hero-btns { transition-delay: 0.54s; }
+body.loaded .hero-stats { transition-delay: 0.68s; }
 
 .hero-title {
   will-change: transform;
@@ -489,6 +493,7 @@ body.loaded .hero-stats { transition-delay: 0.62s; }
   .hero-tag,
   .hero-title,
   .hero-sub,
+  .hero-signature,
   .hero-btns,
   .hero-stats,
   .fade-in {
@@ -500,6 +505,7 @@ body.loaded .hero-stats { transition-delay: 0.62s; }
   .service-btn:hover,
   .about-card:hover,
   .skill-card:hover,
+  .approach-card:hover,
   .journey-card:hover,
   .project-card:hover,
   .service-card:hover {
@@ -799,6 +805,14 @@ img {
   color: var(--text-muted);
   max-width: 510px;
   line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.hero-signature {
+  color: #d7e6ff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
   margin-bottom: 2.5rem;
 }
 
@@ -962,7 +976,81 @@ img {
 
 
 /* -----------------------------------------------
-   7. SERVICES
+   7. APPROCHE
+----------------------------------------------- */
+.approach {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-section) 100%);
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 3rem;
+}
+
+.approach-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+
+.approach-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(79, 142, 247, 0.1), transparent 58%);
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.approach-card.featured {
+  border-color: rgba(79, 142, 247, 0.45);
+  background: linear-gradient(145deg, #111111, #0d1422);
+}
+
+.approach-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(79, 142, 247, 0.14);
+}
+
+.approach-card:hover::before {
+  opacity: 1;
+}
+
+.approach-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.approach-step {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+
+.approach-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+}
+
+.approach-card p {
+  color: var(--text-faint);
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+
+/* -----------------------------------------------
+   8. SERVICES
 ----------------------------------------------- */
 .services {
   background: var(--bg-section);
@@ -1205,6 +1293,11 @@ img {
   border-color: var(--accent);
   transform: translateY(-6px) scale(1.01);
   box-shadow: 0 15px 30px rgba(79, 142, 247, 0.15);
+}
+
+.project-card--featured {
+  border-color: rgba(79, 142, 247, 0.45);
+  box-shadow: 0 18px 44px rgba(79, 142, 247, 0.12);
 }
 
 .project-card:hover .project-img {
@@ -1563,6 +1656,10 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
   .projects-grid,
   .projects-grid--three,
   .journey-grid,
@@ -1719,6 +1816,7 @@ img {
   .service-btn:hover,
   .about-card:hover,
   .skill-card:hover,
+  .approach-card:hover,
   .journey-card:hover,
   .project-card:hover,
   .service-card:hover {

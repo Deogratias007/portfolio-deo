@@ -56,7 +56,7 @@ const observer = new IntersectionObserver((entries) => {
 
 /* Éléments à animer */
 document.querySelectorAll(
-  '.section > .section-tag, .section > .section-title, .section > .section-sub, .service-card, .project-card, .about-card, .skill-card, .journey-card, .contact-card, .hero-stats .stat'
+  '.section > .section-tag, .section > .section-title, .section > .section-sub, .service-card, .project-card, .about-card, .skill-card, .approach-card, .journey-card, .contact-card, .hero-stats .stat'
 ).forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);

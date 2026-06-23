@@ -1,87 +1,42 @@
-# Portfolio — Déo Gratios Akowanou
+# Portfolio — Déo-Gratias AKOWANOU
 
-## Structure des fichiers
+Portfolio personnel de Déo-Gratias AKOWANOU, développeur web orienté solutions et assisté par IA, basé à Cotonou.
 
-```
+## Positionnement
+
+Le site met en avant un profil jeune diplômé, sérieux et opérationnel :
+
+- développement web et applications métier ;
+- analyse des besoins et conception de solutions concrètes ;
+- utilisation intelligente de l'IA comme copilote de travail ;
+- projets orientés impact local et livraison rapide.
+
+## Structure
+
+```text
 portfolio-deo/
-│
-├── index.html          ← Page principale (unique fichier HTML)
-│
+├── index.html
 ├── css/
-│   └── style.css       ← Tous les styles (variables, layout, responsive)
-│
+│   └── style.css
 ├── js/
-│   └── main.js         ← Interactions (scroll, animations, smooth scroll)
-│
-├── images/             ← Dossier pour tes photos et visuels
-│   └── (vide pour l'instant — voir section "Images" ci-dessous)
-│
-└── README.md           ← Ce fichier
+│   └── main.js
+├── images/
+│   ├── profile.jpeg
+│   ├── styleafrik.png
+│   └── charlene-orders.png
+└── README.md
 ```
 
----
+## Lancement local
 
-## Comment ouvrir avec WAMP + VSCode
+Avec WAMP, placer le dossier dans `C:/wamp64/www/`, démarrer WAMP, puis ouvrir :
 
-1. Copie le dossier `portfolio-deo/` dans `C:/wamp64/www/`
-2. Démarre WAMP (icône verte dans la barre des tâches)
-3. Ouvre ton navigateur et va sur : `http://localhost/portfolio-deo/`
-4. Dans VSCode : Fichier → Ouvrir le dossier → sélectionne `portfolio-deo/`
+```text
+http://localhost/portfolio-deo/
+```
 
----
+Le site est statique et ne nécessite aucune dépendance Node ou PHP pour l'affichage.
 
-## Ce que tu dois personnaliser
+## Déploiement
 
-Ouvre `index.html` dans VSCode et remplace :
-
-| Ce qui est écrit          | Remplace par                   |
-|---------------------------|-------------------------------|
-| `+229 XX XX XX XX`        | Ton vrai numéro WhatsApp      |
-| `https://wa.me/22900000000` | `https://wa.me/229TONVRAINUM` |
-| `ton@email.com`           | Ton vrai email                |
-
----
-
-## Ajouter ta photo
-
-1. Mets ta photo dans le dossier `images/` (ex: `photo.jpg`)
-2. Dans `index.html`, trouve la div `.avatar` :
-   ```html
-   <div class="avatar">DG</div>
-   ```
-3. Remplace-la par :
-   ```html
-   <img class="avatar" src="images/photo.jpg" alt="Déo Gratios Akowanou" />
-   ```
-4. Dans `css/style.css`, ajoute à `.avatar` :
-   ```css
-   object-fit: cover;
-   ```
-
----
-
-## Technologies utilisées
-
-- HTML5 sémantique
-- CSS3 (variables CSS, Grid, Flexbox, animations)
-- JavaScript vanilla (Intersection Observer, smooth scroll)
-- Google Fonts — Inter
-- Aucune dépendance externe (pas de jQuery, pas de framework)
-
----
-
-## Déploiement gratuit en ligne
-
-### Option A — Netlify (recommandé)
-1. Va sur https://netlify.com → crée un compte gratuit
-2. Glisse-dépose ton dossier `portfolio-deo/` sur le dashboard
-3. Ton site est en ligne en 30 secondes avec un lien `xxx.netlify.app`
-
-### Option B — GitHub Pages
-1. Crée un repo GitHub nommé `portfolio`
-2. Upload tous les fichiers
-3. Settings → Pages → Source: main → Ton site : `tonnom.github.io/portfolio`
-
----
-
-Bonne chance Déo ! 🚀
+Le projet peut être déployé directement sur GitHub Pages, Netlify ou tout hébergement statique compatible HTML/CSS/JS.
