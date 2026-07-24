@@ -1263,6 +1263,10 @@ img {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.projects-grid--four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1660,8 +1664,26 @@ img {
     grid-template-columns: 1fr;
   }
 
+}
+
+
+/* -----------------------------------------------
+   10.1 RESPONSIVE — Petit desktop
+----------------------------------------------- */
+@media (max-width: 1200px) and (min-width: 901px) {
+  .projects-grid--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* -----------------------------------------------
+   10.2 RESPONSIVE — Tablette complément
+----------------------------------------------- */
+@media (max-width: 900px) {
   .projects-grid,
   .projects-grid--three,
+  .projects-grid--four,
   .journey-grid,
   .services-grid--focused {
     grid-template-columns: 1fr;

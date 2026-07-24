@@ -23,7 +23,8 @@ portfolio-deo/
 ├── images/
 │   ├── profile.jpeg
 │   ├── styleafrik.png
-│   └── charlene-orders.png
+│   ├── charlene-orders.png
+│   └── gamepass-ticketing.png
 └── README.md
 ```
 
