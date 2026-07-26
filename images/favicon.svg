@@ -11,7 +11,7 @@
   </defs>
   <rect width="64" height="64" rx="16" fill="#080808"/>
   <rect x="7" y="7" width="50" height="50" rx="14" fill="url(#bg)"/>
-  <path d="M17 21h11c5 0 8 3 8 8 0 3-1 5-4 7l6 7h-7l-5-6h-3v6h-6V21Zm6 5v6h5c2 0 3-1 3-3s-1-3-3-3h-5Z" fill="url(#spark)"/>
-  <path d="M42 20h5v7h7v5h-7v7h-5v-7h-7v-5h7v-7Z" fill="#080808" opacity=".82"/>
-  <path d="M42 18h4v8h8v4h-8v8h-4v-8h-8v-4h8v-8Z" fill="#FFFFFF"/>
+  <circle cx="48" cy="16" r="4" fill="#FFFFFF" opacity=".9"/>
+  <text x="32" y="39" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" fill="url(#spark)">D&amp;G</text>
+  <path d="M19 47h26" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".78"/>
 </svg>
