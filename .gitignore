@@ -2,3 +2,8 @@
 .codex/
 .empty-git-template/
 {css,js,images}/
+
+# Notes de travail et captures de controle : ne doivent pas partir
+# sur un depot public.
+.impeccable/
+PRODUCT.md

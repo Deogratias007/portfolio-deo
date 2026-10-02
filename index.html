@@ -1,544 +1,551 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Déo-Gratias AKOWANOU — Développeur web orienté solutions, assisté par IA, basé à Cotonou au Bénin." />
-  <title>Déo-Gratias AKOWANOU — Portfolio</title>
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Déo-Gratias AKOWANOU · Sites et logiciels sur mesure, Cotonou</title>
+<meta name="description" content="Je construis des sites, des logiciels de gestion et des automatisations qui servent une activité. Akpakpa Kpondéhou, Cotonou, Bénin." />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="canonical" href="https://deogratias-akowanou.netlify.app/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="Déo-Gratias AKOWANOU" />
+<meta property="og:url" content="https://deogratias-akowanou.netlify.app/" />
+<meta property="og:title" content="Déo-Gratias AKOWANOU · Sites et logiciels sur mesure" />
+<meta property="og:description" content="Je dirige le développement commercial d’une entreprise et j’écris moi-même le code. Cotonou, Bénin." />
+<meta property="og:image" content="https://deogratias-akowanou.netlify.app/images/partage.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Panneau peint : Sites et logiciels sur mesure, Déo-Gratias AKOWANOU, Cotonou." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#15317A" />
 
-  <!-- Feuille de style principale -->
-  <link rel="stylesheet" href="css/style.css" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<link rel="preload" href="fonts/alfa-slab-one-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="css/style.css" />
+<script>
+  /* Posé avant le rendu : sans JavaScript, le lettrage s’affiche
+     simplement peint, sans masque et sans attente. */
+  document.documentElement.dataset.anime = 'oui';
+</script>
 </head>
 <body>
 
-  <!-- ========================
-       NAVIGATION
-  ======================== -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-logo">D&G<span>.</span></div>
-    <ul class="nav-links">
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#approach">Approche</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projets</a></li>
-      <li><a href="#journey">Parcours</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="https://wa.me/2290155016669" target="_blank" class="nav-cta">
-      Démarrer un projet
-    </a>
-  </nav>
+<a class="saut" href="#contact">Aller directement au contact</a>
 
-  <!-- ========================
-       HERO
-  ======================== -->
-  <section class="hero" id="home">
-    <div class="hero-glow"></div>
+<header class="enseigne" id="haut">
 
-    <div class="hero-tag">
-      <span class="hero-dot"></span>
-      Disponible pour de nouveaux projets
-    </div>
+  <h1 class="lettrage">
+    <span class="ligne ligne--un">
+      <span class="mot mot--ombre" aria-hidden="true">Sites &amp; logiciels</span>
+      <span class="mot mot--face">Sites &amp; logiciels</span>
+    </span>
+    <span class="ligne ligne--deux">
+      <span class="mot mot--ombre" aria-hidden="true">sur mesure</span>
+      <span class="mot mot--face">sur mesure</span>
+    </span>
+  </h1>
 
-    <h1 class="hero-title">
-      Développeur orienté solutions,<br />
-      <span class="accent">assisté par l'IA.</span>
-    </h1>
+  <p class="promesse">
+    Je dirige le développement commercial d’une entreprise et j’écris moi-même le code.
+    Je comprends le problème d’argent avant d’ouvrir l’éditeur.
+  </p>
 
-    <p class="hero-sub">
-      Je conçois des sites, applications et outils numériques utiles à partir de
-      besoins réels. Mon avantage : organiser le problème, utiliser l'IA comme
-      copilote de production, puis livrer une solution claire, rapide et concrète.
-    </p>
+  <p class="signature">Déo-Gratias AKOWANOU <span>·</span> Akpakpa Kpondéhou, Cotonou</p>
 
-    <p class="hero-signature">
-      Je construis vite, je pense propre, j'utilise l'IA comme copilote.
-    </p>
+  <a class="bande" href="https://wa.me/2290155016669">
+    <span class="bande__mot">WhatsApp</span>
+    <span class="bande__num">+229 01 55 01 66 69</span>
+  </a>
 
-    <div class="hero-btns">
-      <a href="#contact" class="btn btn-primary">Travaillons ensemble →</a>
-      <a href="#projects" class="btn btn-secondary">Voir mes projets</a>
-    </div>
+  <div class="enseigne__corps">
 
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">4</div>
-        <div class="stat-label">Projets majeurs</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">2</div>
-        <div class="stat-label">Initiatives startup</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">IA</div>
-        <div class="stat-label">Méthode de travail assumée</div>
-      </div>
-    </div>
-  </section>
+    <figure class="plaque">
+      <span class="vis vis--hg" aria-hidden="true"></span>
+      <span class="vis vis--hd" aria-hidden="true"></span>
+      <span class="vis vis--bg" aria-hidden="true"></span>
+      <span class="vis vis--bd" aria-hidden="true"></span>
+      <picture>
+        <source srcset="images/portrait-640.webp" type="image/webp" />
+        <img src="images/portrait-640.jpg" width="640" height="800"
+             alt="Portrait de Déo-Gratias AKOWANOU." decoding="async" />
+      </picture>
+    </figure>
 
-  <!-- ========================
-       À PROPOS
-  ======================== -->
-  <section class="about section" id="about">
-    <div class="about-left">
-      <p class="section-tag">À propos</p>
-      <img class="avatar" src="images/profile.jpeg" alt="Déo-Gratias AKOWANOU" />
-      <h2 class="section-title">
-        Déo-Gratias<br />AKOWANOU
-      </h2>
-      <p class="about-desc">
-        Je suis titulaire d'une Licence en Systèmes Informatiques et Logiciels,
-        avec un parcours orienté vers le développement web, l'analyse des
-        besoins et la conception de solutions numériques.
-        <br /><br />
-        J'ai soutenu un mémoire portant sur une plateforme numérique destinée
-        aux stylistes, une expérience qui m'a permis de travailler sur un
-        problème métier concret : organiser la relation entre professionnels,
-        clients, commandes et suivi des prestations.
-        <br /><br />
-        Aujourd'hui, je développe mes compétences en React, PHP, Laravel et
-        intégration d'outils d'intelligence artificielle. À travers Warinx
-        Technologie et mon implication dans SenseLab, je souhaite contribuer à
-        la transformation numérique en Afrique avec des solutions utiles,
-        accessibles et bien pensées.
+    <div class="offre">
+      <h2 class="titre-offre">Ce que je prends en mon nom</h2>
+      <ul class="lignes">
+        <li>
+          <a href="https://wa.me/2290155016669?text=Bonjour%20D%C3%A9o%2C%20je%20veux%20une%20page%20de%20commande%20WhatsApp%20pour%20ma%20boutique.">
+            <span class="lignes__quoi">Page de commande WhatsApp</span>
+            <span class="lignes__delai">livrée en 5 jours</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/2290155016669?text=Bonjour%20D%C3%A9o%2C%20je%20veux%20un%20site%20vitrine%20pour%20mon%20activit%C3%A9.">
+            <span class="lignes__quoi">Site vitrine professionnel</span>
+            <span class="lignes__delai">délai fixé avant de commencer</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/2290155016669?text=Bonjour%20D%C3%A9o%2C%20j%27ai%20d%C3%A9j%C3%A0%20un%20site%20et%20je%20voudrais%20le%20reprendre.">
+            <span class="lignes__quoi">Reprise d’un site existant</span>
+            <span class="lignes__delai">diagnostic d’abord, devis ensuite</span>
+          </a>
+        </li>
+      </ul>
+      <p class="renvoi">
+        Un projet d’entreprise plus large, avec une équipe et de la maintenance, je ne le prends
+        pas seul&nbsp;: je le porte avec <b>SenseLab</b>, la société d’ingénierie logicielle que
+        je co-dirige à Cotonou.
       </p>
-      <div class="about-tags">
-        <span class="tag">Développement Web</span>
-        <span class="tag">React &amp; PHP</span>
-        <span class="tag">Intelligence Artificielle</span>
-        <span class="tag">Prompt Engineering</span>
-        <span class="tag">Analyse &amp; Conception</span>
-        <span class="tag">Laravel</span>
-      </div>
     </div>
 
-    <div class="about-right">
-      <div class="about-card">
-        <div class="about-card-icon">⚙</div>
-        <h4>Développement Web</h4>
-        <p>Création de sites et d'applications web avec une approche claire, structurée et évolutive.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">◎</div>
-        <h4>Intégration IA</h4>
-        <p>Utilisation d'outils comme ChatGPT, Claude et Codex pour améliorer les workflows et la productivité.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">◇</div>
-        <h4>Analyse métier</h4>
-        <p>Compréhension des besoins, modélisation UML et conception de solutions adaptées au contexte réel.</p>
-      </div>
-      <div class="about-card">
-        <div class="about-card-icon">↗</div>
-        <h4>Esprit entrepreneurial</h4>
-        <p>Construction progressive de projets comme Warinx Technologie et SenseLab, avec une vision tournée vers l'impact numérique local.</p>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- ========================
-       COMPÉTENCES
-  ======================== -->
-  <section class="skills section" id="skills">
-    <p class="section-tag">Compétences</p>
-    <h2 class="section-title">Bases techniques et conception</h2>
-    <p class="section-sub">
-      Un socle orienté développement web, analyse des besoins et intégration
-      progressive de l'intelligence artificielle dans des solutions concrètes.
+</header>
+
+<main>
+
+  <section class="section" id="travaux">
+    <h2 class="titre">Ce que j’ai construit</h2>
+    <p class="chapo">
+      Chaque projet porte son statut réel. Un portfolio qui ne montre que le fini ment sur le
+      métier&nbsp;: construire, c’est avoir en permanence des choses en ligne, des choses en
+      chantier et des choses en pause.
     </p>
 
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-name">React</div>
-        <p>Création d'interfaces web modernes, composants réutilisables et expériences utilisateur dynamiques.</p>
-      </div>
+    <ol class="realisations">
 
-      <div class="skill-card">
-        <div class="skill-name">PHP</div>
-        <p>Développement de fonctionnalités côté serveur, formulaires, logique métier et traitement de données.</p>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-name">Laravel</div>
-        <p>Framework en progression pour structurer des applications web plus solides et maintenables.</p>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-name">IA</div>
-        <p>Utilisation de ChatGPT, Claude et Codex pour accélérer l'analyse, la rédaction et le développement.</p>
-      </div>
-
-      <div class="skill-card">
-        <div class="skill-name">UML</div>
-        <p>Modélisation des besoins, cas d'utilisation et processus avant le développement d'une solution.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================
-       APPROCHE
-  ======================== -->
-  <section class="approach section" id="approach">
-    <p class="section-tag">Comment je travaille</p>
-    <h2 class="section-title">Vite, propre, orienté résultat</h2>
-    <p class="section-sub">
-      J'utilise l'IA comme un copilote, pas comme un raccourci aveugle : elle
-      m'aide à analyser, structurer et accélérer, pendant que je garde la
-      responsabilité de la logique, du code et de l'expérience finale.
-    </p>
-
-    <div class="approach-grid">
-      <div class="approach-card">
-        <div class="approach-step">01</div>
-        <h3>Clarifier le besoin</h3>
-        <p>
-          Je commence par comprendre l'objectif, les utilisateurs et les
-          contraintes avant d'écrire du code.
-        </p>
-      </div>
-
-      <div class="approach-card featured">
-        <div class="approach-step">02</div>
-        <h3>Construire avec l'IA</h3>
-        <p>
-          J'utilise les assistants IA pour explorer plus vite, générer des
-          pistes, relire et améliorer, tout en gardant une validation humaine.
-        </p>
-      </div>
-
-      <div class="approach-card">
-        <div class="approach-step">03</div>
-        <h3>Livrer concret</h3>
-        <p>
-          Je privilégie des interfaces simples, testables et utiles, capables
-          d'évoluer sans devenir lourdes.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================
-       SERVICES
-  ======================== -->
-  <section class="services section" id="services">
-    <p class="section-tag">Services</p>
-    <h2 class="section-title">Solutions utiles et concrètes</h2>
-    <p class="section-sub">
-      Des prestations alignées avec mon profil : développement web,
-      amélioration d'outils existants et intégration simple de l'IA dans des
-      usages professionnels.
-    </p>
-
-    <div class="services-grid services-grid--focused">
-
-      <div class="service-card">
-        <div class="service-name">Site vitrine professionnel</div>
-        <div class="price">Sur devis</div>
-        <div class="price-label">Selon le contenu et les fonctionnalités</div>
-        <ul class="service-features">
-          <li>Présentation claire de votre activité</li>
-          <li>Interface responsive mobile et desktop</li>
-          <li>Pages essentielles et formulaire de contact</li>
-          <li>Structure propre en HTML, CSS, PHP ou React</li>
-          <li>Accompagnement jusqu'à la mise en ligne</li>
-        </ul>
-        <a href="#contact" class="service-btn outline">Discuter du besoin →</a>
-      </div>
-
-      <div class="service-card featured">
-        <div class="featured-badge">Sur mesure</div>
-        <div class="service-name">Application Web sur mesure</div>
-        <div class="price">Sur devis</div>
-        <div class="price-label">Après analyse du besoin métier</div>
-        <ul class="service-features">
-          <li>Analyse des objectifs et des utilisateurs</li>
-          <li>Modélisation simple des processus</li>
-          <li>Développement de fonctionnalités adaptées</li>
-          <li>Interfaces de gestion et tableaux de suivi</li>
-          <li>Base solide pour faire évoluer le projet</li>
-        </ul>
-        <a href="#contact" class="service-btn filled">Présenter un projet →</a>
-      </div>
-
-      <div class="service-card">
-        <div class="service-name">Refonte et amélioration de site</div>
-        <div class="price">Sur devis</div>
-        <div class="price-label">Selon l'état du site existant</div>
-        <ul class="service-features">
-          <li>Diagnostic de l'interface et du contenu</li>
-          <li>Amélioration de la lisibilité et du parcours utilisateur</li>
-          <li>Correction de problèmes HTML, CSS ou PHP</li>
-          <li>Optimisation responsive et cohérence visuelle</li>
-          <li>Modernisation sans repartir de zéro</li>
-        </ul>
-        <a href="#contact" class="service-btn outline">Améliorer un site →</a>
-      </div>
-
-      <div class="service-card">
-        <div class="service-name">Intégration IA et automatisation simple</div>
-        <div class="price">Sur devis</div>
-        <div class="price-label">Pour des usages ciblés et réalistes</div>
-        <ul class="service-features">
-          <li>Structuration de prompts professionnels</li>
-          <li>Intégration d'assistants IA dans un workflow</li>
-          <li>Automatisation de tâches répétitives simples</li>
-          <li>Documentation claire pour l'utilisation</li>
-          <li>Approche adaptée aux petites équipes</li>
-        </ul>
-        <a href="#contact" class="service-btn outline">Explorer une idée →</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ========================
-       PROJETS
-  ======================== -->
-  <section class="projects section" id="projects">
-    <p class="section-tag">Projets</p>
-    <h2 class="section-title">Réalisations</h2>
-    <p class="section-sub">
-      Quatre initiatives qui illustrent ma manière de travailler : partir d'un
-      problème concret, comprendre le métier, puis construire une solution
-      numérique claire et exploitable.
-    </p>
-
-    <div class="projects-grid projects-grid--four">
-
-      <div class="project-card project-card--featured">
-        <div class="project-img project-img--blue project-img--screen">
-          <img src="images/styleafrik.png" alt="Capture d'écran de StyleAfrik" />
-          <div class="project-badge">Projet phare · mémoire soutenu</div>
-        </div>
-        <div class="project-body">
-          <h3>PlatformCouture (StyleAfrik)</h3>
-          <p>
-            Plateforme numérique conçue autour des besoins des stylistes :
-            présentation des créations, gestion des demandes clients, suivi des
-            commandes et organisation du parcours entre le client et le
-            professionnel.
-          </p>
-          <div class="project-tags">
-            <span class="project-tag">Web App</span>
-            <span class="project-tag">Analyse métier</span>
-            <span class="project-tag">UML</span>
+      <li class="realisation">
+        <div class="realisation__vue">
+          <div class="diapo" data-diapo data-duree="5200">
+            <span class="etat etat--ligne">En ligne</span>
+            <div class="diapo__cadre">
+              <ul class="diapo__piste">
+                <li class="diapo__vue">
+                  <picture>
+                    <source srcset="images/mvd-bord-1000.webp" type="image/webp" />
+                    <img src="images/mvd-bord-1000.jpg" width="1000" height="433" loading="lazy"
+                         decoding="async" alt="Tableau de bord de la direction générale." />
+                  </picture>
+                  <span class="diapo__nom">Tableau de bord</span>
+                </li>
+                <li class="diapo__vue">
+                  <picture>
+                    <source srcset="images/mvd-decision-1000.webp" type="image/webp" />
+                    <img src="images/mvd-decision-1000.jpg" width="1000" height="431" loading="lazy"
+                         decoding="async" alt="Moteur de décision, alertes et recommandations." />
+                  </picture>
+                  <span class="diapo__nom">Moteur de décision</span>
+                </li>
+                <li class="diapo__vue">
+                  <picture>
+                    <source srcset="images/mvd-stock-1000.webp" type="image/webp" />
+                    <img src="images/mvd-stock-1000.jpg" width="1000" height="433" loading="lazy"
+                         decoding="async" alt="Gestion du stock et des matières premières." />
+                  </picture>
+                  <span class="diapo__nom">Stock et matières</span>
+                </li>
+                <li class="diapo__vue">
+                  <picture>
+                    <source srcset="images/mvd-commercial-1000.webp" type="image/webp" />
+                    <img src="images/mvd-commercial-1000.jpg" width="1000" height="432" loading="lazy"
+                         decoding="async" alt="Centre de commandement du développement commercial." />
+                  </picture>
+                  <span class="diapo__nom">Développement commercial</span>
+                </li>
+                <li class="diapo__vue">
+                  <picture>
+                    <source srcset="images/mvd-connexion-1000.webp" type="image/webp" />
+                    <img src="images/mvd-connexion-1000.jpg" width="1000" height="539" loading="lazy"
+                         decoding="async" alt="Écran de connexion par profil." />
+                  </picture>
+                  <span class="diapo__nom">Accès par profil</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-card">
-        <div class="project-img project-img--green">
-          <div class="project-logo">WARINX<br />TECH</div>
-          <div class="project-badge project-badge--green">En développement</div>
-        </div>
-        <div class="project-body">
-          <h3>Warinx Technologie</h3>
+        <div class="realisation__dire">
+          <h3>MVD Manager</h3>
+          <p class="realisation__sous">La version aboutie de Charlène Orders</p>
           <p>
-            Projet entrepreneurial en cours orienté vers la création de
-            solutions numériques, l'intégration d'outils IA et l'accompagnement
-            progressif des porteurs d'idées dans leur transformation digitale.
+            D’abord il y a eu <b>Charlène Orders</b>, un logiciel posé sur l’ordinateur de la
+            direction. La directrice générale s’en est servie tous les jours et m’a fait ses
+            retours. Quand la marque a commencé à être connue et que l’activité a grossi, ces
+            retours ne tenaient plus dans l’outil de départ. <b>MVD Manager</b> est né de là&nbsp;:
+            pas une idée, une deuxième version écrite à partir de l’usage réel.
           </p>
-          <div class="project-tags">
-            <span class="project-tag">Startup</span>
-            <span class="project-tag">IA</span>
-            <span class="project-tag">Innovation locale</span>
-          </div>
+          <p>
+            Seize modules couvrent toute la maison, des commandes à la cuisine, du stock aux
+            finances, des ambassadeurs au développement commercial. Chacun voit son poste et rien
+            d’autre. <b>208 fichiers, 35 894 lignes</b>, un moteur de calcul qui tient les marges
+            et un moteur de décision qui lève les alertes avant qu’elles coûtent.
+          </p>
+          <p class="outils">React 19 · TypeScript · Tailwind 4 · Zustand · SQLite distribué</p>
         </div>
-      </div>
+      </li>
 
-      <div class="project-card">
-        <div class="project-img project-img--orange project-img--screen">
-          <img src="images/charlene-orders.png" alt="Capture d'écran de Charlène Orders" />
-          <div class="project-badge project-badge--orange">Application desktop</div>
+      <li class="realisation">
+        <div class="realisation__vue">
+          <figure class="cadre">
+            <span class="etat etat--ligne">En ligne</span>
+            <span class="etat etat--cours">Toujours en chantier</span>
+            <div class="fondu" data-porte>
+              <picture class="fondu__vue">
+                <source srcset="images/senselab-a-1000.webp" type="image/webp" />
+                <img src="images/senselab-a-1000.jpg" width="1000" height="625" loading="lazy"
+                     decoding="async" alt="Page d’accueil du site SenseLab, dont le fond est une vidéo." />
+              </picture>
+              <picture class="fondu__vue" aria-hidden="true">
+                <source srcset="images/senselab-b-1000.webp" type="image/webp" />
+                <img src="images/senselab-b-1000.jpg" width="1000" height="625" loading="lazy" decoding="async" alt="" />
+              </picture>
+              <picture class="fondu__vue" aria-hidden="true">
+                <source srcset="images/senselab-c-1000.webp" type="image/webp" />
+                <img src="images/senselab-c-1000.jpg" width="1000" height="625" loading="lazy" decoding="async" alt="" />
+              </picture>
+            </div>
+          </figure>
         </div>
-        <div class="project-body">
+        <div class="realisation__dire">
+          <h3>Site SenseLab</h3>
+          <p class="realisation__sous">La vitrine de la société que je co-dirige</p>
+          <p>
+            En français et en anglais, avec un espace éditorial relié à un gestionnaire de contenu
+            pour que mon associé publie sans me demander. En production, et je continue de le
+            retravailler. C’est le projet sur lequel j’ai le plus mesuré, et les chiffres plus bas
+            en viennent.
+          </p>
+          <p class="outils">Next.js · React · Sanity · bilingue</p>
+        </div>
+      </li>
+
+      <li class="realisation">
+        <div class="realisation__vue">
+          <figure class="cadre">
+            <span class="etat etat--ligne">En ligne</span>
+            <picture>
+              <source srcset="images/gamepass-ticketing-1000.webp" type="image/webp" />
+              <img src="images/gamepass-ticketing-1000.jpg" width="1000" height="573" loading="lazy"
+                   decoding="async" alt="Page de réservation de la billetterie GamePass." />
+            </picture>
+          </figure>
+        </div>
+        <div class="realisation__dire">
+          <h3>GamePass</h3>
+          <p class="realisation__sous">La billetterie d’un vrai événement</p>
+          <p>
+            Réservation, validation des paiements, envoi du billet, code à scanner et contrôle à
+            l’entrée le jour même. C’est le seul de mes projets qui a eu à tenir une porte un soir
+            donné, avec de vraies personnes qui attendaient devant.
+          </p>
+          <p class="outils">React · TypeScript · Google Apps Script</p>
+        </div>
+      </li>
+
+      <li class="realisation">
+        <div class="realisation__vue">
+          <figure class="cadre">
+            <span class="etat etat--local">Hors ligne, livré</span>
+            <picture>
+              <source srcset="images/charlene-orders-1000.webp" type="image/webp" />
+              <img src="images/charlene-orders-1000.jpg" width="1000" height="602" loading="lazy"
+                   decoding="async" alt="Écran d’accueil de Charlène Orders." />
+            </picture>
+          </figure>
+        </div>
+        <div class="realisation__dire">
           <h3>Charlène Orders</h3>
+          <p class="realisation__sous">Le point de départ de MVD Manager</p>
           <p>
-            Application desktop développée pour une pâtisserie béninoise afin
-            de centraliser la gestion des commandes, des paiements, des
-            statistiques de vente et du suivi des livraisons, avec une approche
-            centrée sur les opérations quotidiennes.
+            Un logiciel posé sur l’ordinateur de la direction d’une pâtisserie&nbsp;: commandes,
+            paiements, stock, livreurs. Il fonctionne sans connexion, parce que la boutique n’en a
+            pas toujours une. C’est son usage quotidien, et les retours qui sont venus avec, qui
+            ont donné MVD Manager.
           </p>
-          <div class="project-tags">
-            <span class="project-tag">Logiciel métier</span>
-            <span class="project-tag">UX</span>
-            <span class="project-tag">Gestion</span>
-          </div>
+          <p class="outils">Electron · React · base locale</p>
         </div>
-      </div>
+      </li>
 
-      <div class="project-card">
-        <div class="project-img project-img--blue project-img--screen">
-          <img src="images/gamepass-ticketing.png" alt="Capture d'écran de GamePass billetterie" />
-          <div class="project-badge">Billetterie &amp; scan QR</div>
+      <li class="realisation">
+        <div class="realisation__vue">
+          <figure class="cadre">
+            <span class="etat etat--local">En local, pas terminé</span>
+            <picture>
+              <source srcset="images/styleafrik-1000.webp" type="image/webp" />
+              <img src="images/styleafrik-1000.jpg" width="1000" height="602" loading="lazy"
+                   decoding="async" alt="Interface de la plateforme StyleAfrik." />
+            </picture>
+          </figure>
         </div>
-        <div class="project-body">
-          <h3>Système de Billetterie &amp; Scan QR (Game Party)</h3>
+        <div class="realisation__dire">
+          <h3>StyleAfrik</h3>
+          <p class="realisation__sous">Mon mémoire de licence, soutenu</p>
           <p>
-            Plateforme full-stack de billetterie événementielle avec parcours de
-            réservation, tableau de bord administrateur sécurisé pour valider
-            les paiements, envoi automatique des billets par WhatsApp ou Email,
-            génération de E-billets avec QR Code et interface de scan en temps
-            réel pour le contrôle d'accès le jour J.
+            Une plateforme reliant les stylistes à leurs clientes&nbsp;: créations, demandes, suivi
+            des commandes. Elle tourne sur ma machine et n’a jamais été mise en ligne. Je le dis
+            plutôt que de laisser croire le contraire.
           </p>
-          <div class="project-tags">
-            <span class="project-tag">React</span>
-            <span class="project-tag">TypeScript</span>
-            <span class="project-tag">Tailwind CSS</span>
-            <span class="project-tag">Google Apps Script</span>
-          </div>
+          <p class="outils">Analyse métier · modélisation · web</p>
         </div>
-      </div>
+      </li>
 
-    </div>
+    </ol>
   </section>
 
-  <!-- ========================
-       PARCOURS & INITIATIVES
-  ======================== -->
-  <section class="journey section" id="journey">
-    <p class="section-tag">Parcours &amp; Initiatives</p>
-    <h2 class="section-title">Expériences structurantes</h2>
-    <p class="section-sub">
-      Des expériences qui complètent mon profil technique et montrent ma
-      capacité à comprendre les environnements professionnels, les opérations
-      et les besoins réels des utilisateurs.
+  <section class="section section--creux" id="automatisations">
+    <h2 class="titre">Le travail que la machine peut faire à votre place</h2>
+    <p class="chapo">
+      Dans une petite entreprise, la même personne vend, encaisse, relance et compte. Ce n’est pas
+      un problème de courage, c’est un problème de temps.
     </p>
 
-    <div class="journey-grid">
-      <div class="journey-card">
-        <div class="journey-meta">Stage académique</div>
-        <h3>Loterie Nationale du Bénin</h3>
-        <p>
-          Immersion professionnelle autour des systèmes d'information, du
-          support informatique et du diagnostic d'incidents. Cette expérience
-          m'a permis de mieux comprendre le fonctionnement d'une organisation,
-          les contraintes techniques internes et l'importance d'un service
-          informatique fiable.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Systèmes d'information</span>
-          <span class="project-tag">Support informatique</span>
-          <span class="project-tag">Diagnostic</span>
-        </div>
-      </div>
+    <div class="diapo diapo--texte" data-diapo data-duree="7600">
+      <div class="diapo__cadre">
+        <ul class="diapo__piste">
 
-      <div class="journey-card">
-        <div class="journey-meta">Direction commerciale</div>
-        <h3>Mon Ventre D'Abord</h3>
-        <p>
-          Directeur du Développement Commercial, chargé de piloter la stratégie
-          commerciale, développer le chiffre d'affaires, organiser la prospection
-          et structurer le réseau d'ambassadeurs. Mon rôle couvre aussi le suivi
-          des ventes, les partenariats, les campagnes commerciales et le contrôle
-          de la communication client sur les réseaux sociaux.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Développement commercial</span>
-          <span class="project-tag">Ambassadeurs</span>
-          <span class="project-tag">Prospection</span>
-          <span class="project-tag">Partenariats</span>
-        </div>
-      </div>
+          <li class="diapo__vue auto">
+            <span class="etat etat--ligne etat--pose">En service</span>
+            <h3>La commande arrive déjà écrite</h3>
+            <p>
+              Votre cliente choisit sur une page, et la commande tombe sur votre WhatsApp, complète
+              et numérotée. Plus de «&nbsp;c’est combien&nbsp;?&nbsp;» répété trente fois par jour,
+              plus de commande perdue au milieu d’une conversation.
+            </p>
+            <p class="auto__gain">Ce que ça vous rend&nbsp;: vos soirées, et les commandes que vous oubliiez.</p>
+          </li>
 
-      <div class="journey-card">
-        <div class="journey-meta">Startup</div>
-        <h3>SenseLab</h3>
-        <p>
-          Implication dans une startup en structuration, avec une approche
-          orientée organisation, clarté des rôles, développement commercial et
-          construction progressive d'une proposition de valeur.
-        </p>
-        <div class="project-tags">
-          <span class="project-tag">Startup</span>
-          <span class="project-tag">Organisation</span>
-          <span class="project-tag">Développement commercial</span>
-        </div>
-      </div>
-    </div>
-  </section>
+          <li class="diapo__vue auto">
+            <span class="etat etat--ligne etat--pose">En service</span>
+            <h3>L’alerte avant la rupture, pas après</h3>
+            <p>
+              Le système compare ce qui est commandé à ce qui reste en stock, et vous prévient
+              avant que ça manque, avec ce qu’il faut acheter.
+            </p>
+            <p class="auto__gain">Ce que ça vous rend&nbsp;: les ventes que vous ratez quand il n’y a plus rien.</p>
+          </li>
 
-  <!-- ========================
-       CONTACT
-  ======================== -->
-  <section class="contact section" id="contact">
-    <p class="section-tag">Contact</p>
-    <h2 class="section-title">Travaillons ensemble</h2>
+          <li class="diapo__vue auto">
+            <span class="etat etat--cours etat--pose">Je sais le construire</span>
+            <h3>Le client qui n’a pas payé, relancé sans vous</h3>
+            <p>
+              La liste de ceux qui doivent, et un message qui part tout seul, au bon moment,
+              poliment. C’est là que dort le plus d’argent dans une petite entreprise&nbsp;: pas
+              chez ceux qui refusent de payer, chez ceux que personne n’a relancés.
+            </p>
+            <p class="auto__gain">Ce que ça vous rend&nbsp;: de l’argent déjà gagné, mais jamais encaissé.</p>
+          </li>
 
-    <div class="contact-card">
-      <h3>Vous avez une idée ou un besoin concret ?</h3>
-      <p>
-        Présentez-moi votre projet, votre problème métier ou votre site
-        existant. Je vous répondrai avec une approche claire et adaptée à votre
-        contexte.
-      </p>
-      <div class="contact-links">
+          <li class="diapo__vue auto">
+            <span class="etat etat--cours etat--pose">Je sais le construire</span>
+            <h3>Le rapport du lundi matin</h3>
+            <p>
+              Combien vous avez vendu, combien vous avez dépensé, et ce qu’il reste. Envoyé chaque
+              lundi, sans que personne ne compile quoi que ce soit.
+            </p>
+            <p class="auto__gain">Ce que ça vous rend&nbsp;: la demi-journée que vous passiez à faire les comptes.</p>
+          </li>
 
-        <a href="https://wa.me/2290155016669" target="_blank" class="contact-link">
-          <div class="contact-link-left">
-            <div class="contact-icon contact-wa">💬</div>
-            <div>
-              <div class="contact-link-label">WhatsApp</div>
-              <div class="contact-link-value">+2290155016669</div>
-            </div>
-          </div>
-          <span class="arrow">→</span>
-        </a>
+          <li class="diapo__vue auto">
+            <span class="etat etat--cours etat--pose">Je sais le construire</span>
+            <h3>Le rendez-vous rappelé la veille</h3>
+            <p>
+              Un message automatique la veille, pour les cliniques, les salons, les écoles, les
+              ateliers. Le rendez-vous oublié est le revenu le plus bête à perdre.
+            </p>
+            <p class="auto__gain">Ce que ça vous rend&nbsp;: les places vides de votre journée.</p>
+          </li>
 
-        <a href="mailto:akowanoudeogratias0@gmail.com" class="contact-link">
-          <div class="contact-link-left">
-            <div class="contact-icon contact-email">✉️</div>
-            <div>
-              <div class="contact-link-label">Email</div>
-              <div class="contact-link-value">akowanoudeogratias0@gmail.com</div>
-            </div>
-          </div>
-          <span class="arrow">→</span>
-        </a>
+          <li class="diapo__vue auto">
+            <span class="etat etat--cours etat--pose">Je sais le construire</span>
+            <h3>La fiche client qui se remplit toute seule</h3>
+            <p>
+              Chaque commande, chaque demande, chaque appel alimente une base propre. Le jour où
+              vous voulez relancer vos clients, la liste existe déjà.
+            </p>
+            <p class="auto__gain">Ce que ça vous rend&nbsp;: le fichier client que vous n’avez jamais eu le temps de faire.</p>
+          </li>
 
-        <a href="https://github.com/Deogratias007" target="_blank" class="contact-link">
-          <div class="contact-link-left">
-            <div class="contact-icon icon-github">GH</div>
-            <div>
-              <div class="contact-link-label">GitHub</div>
-              <div class="contact-link-value">github.com/Deogratias007</div>
-            </div>
-          </div>
-          <span class="arrow">→</span>
-        </a>
-
-        <div class="contact-link no-link">
-          <div class="contact-link-left">
-            <div class="contact-icon contact-loc">📍</div>
-            <div>
-              <div class="contact-link-label">Localisation</div>
-              <div class="contact-link-value">Akpakpa Kpondéhou, Cotonou, Bénin 🇧🇯</div>
-            </div>
-          </div>
-          <span class="arrow">→</span>
-        </div>
-
+        </ul>
       </div>
     </div>
+
+    <p class="note note--franc">
+      <b>Ce que je ne vais pas vous raconter.</b> Je me forme à l’automatisation en ce moment. Les
+      deux premières de cette liste tournent déjà dans mes projets, vous pouvez les voir plus haut.
+      Les quatre autres, je sais les construire et je ne les ai pas encore vendues. Je préfère vous
+      le dire maintenant que vous le laisser découvrir après.
+    </p>
   </section>
 
-  <!-- ========================
-       FOOTER
-  ======================== -->
-  <footer class="footer">
-    <p>© 2026 <span>Déo-Gratias AKOWANOU</span> — Tous droits réservés</p>
-  </footer>
+  <section class="section" id="chantier">
+    <h2 class="titre">Ce que je lance en ce moment</h2>
+    <p class="chapo">
+      Ce que personne ne montre jamais, et qui dit pourtant le plus de choses sur quelqu’un&nbsp;:
+      ce qu’il a sur l’établi. Rien de ce qui suit n’est terminé. Tout existe déjà.
+    </p>
 
-  <!-- Script principal -->
-  <script src="js/main.js"></script>
+    <ol class="chantiers">
 
+      <li class="chantier">
+        <figure class="cadre">
+          <span class="etat etat--cours">En cours</span>
+          <picture>
+            <source srcset="images/pack-fetes-1000.webp" type="image/webp" />
+            <img src="images/pack-fetes-1000.jpg" width="1000" height="625" loading="lazy"
+                 decoding="async" alt="Page de commande du Pack Fêtes, boutique de démonstration." />
+          </picture>
+        </figure>
+        <h3>Pack Fêtes</h3>
+        <p>
+          La page de commande qui envoie tout sur le WhatsApp de la boutique, sans autorisation à
+          demander et sans coût par message. Démonstration testée de bout en bout.
+        </p>
+      </li>
+
+      <li class="chantier">
+        <figure class="cadre">
+          <span class="etat etat--pause">En pause</span>
+          <div class="porte" data-porte>
+            <picture>
+              <source srcset="images/ayixo-dedans-1000.webp" type="image/webp" />
+              <img src="images/ayixo-dedans-1000.jpg" width="1000" height="562" loading="lazy"
+                   decoding="async" alt="Ayixo, écran d’accueil et aperçu de l’intérieur." />
+            </picture>
+            <span class="porte__battant porte__battant--g" aria-hidden="true"></span>
+            <span class="porte__battant porte__battant--d" aria-hidden="true"></span>
+            <span class="porte__doigt" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11" />
+                <path d="M12 11V4.5a1.5 1.5 0 0 1 3 0V11" />
+                <path d="M15 11V6.5a1.5 1.5 0 0 1 3 0V13" />
+                <path d="M9 11V9.5a1.5 1.5 0 0 0-3 0v4.2c0 3.4 2.4 6.3 5.7 6.3h1.6a5 5 0 0 0 5-5V13" />
+              </svg>
+            </span>
+          </div>
+        </figure>
+        <h3>Ayixo</h3>
+        <p>
+          Il y a des messages qu’on écrit dix fois et qu’on n’envoie jamais. Reprendre contact
+          après des mois de silence, répondre à un client fâché, demander à être payé sans se
+          fâcher. Ayixo lit la situation et propose quoi répondre, puis explique pourquoi ça
+          marche. Du fon <i>ayi</i>, le cœur, et <i>xó</i>, la parole.
+        </p>
+        <p>
+          L’interface existe, le moteur est écrit et testé. Je l’ai mis en pause pour me
+          concentrer sur ce qui rapporte maintenant. Savoir arrêter fait partie du métier, mais
+          je n’ai jamais su si le problème était le mien ou celui de tout le monde.
+        </p>
+
+        <div class="voix">
+          <p class="voix__question">Est-ce que je devrais le finir&nbsp;?</p>
+          <p class="voix__dire">
+            Si ce problème vous parle, dites-le-moi. Si plusieurs personnes le demandent, je le
+            reprends, et vous serez prévenu le jour où il sort.
+          </p>
+          <a class="voix__bouton"
+             href="https://wa.me/2290155016669?text=Bonjour%20D%C3%A9o%2C%20je%20viens%20de%20voir%20Ayixo%20sur%20votre%20site.%20Finissez-le%2C%20%C3%A7a%20m%27int%C3%A9resse.">
+            Oui, finis&#8209;le
+          </a>
+        </div>
+      </li>
+
+      <li class="chantier chantier--annonce">
+        <span class="etat etat--venir">À venir</span>
+        <h3>Le répondeur WhatsApp</h3>
+        <p>
+          Un robot qui répond seul aux questions courantes d’une boutique. Étude faite, construction
+          en janvier. On ne touche jamais au numéro d’une commerçante pendant son mois le plus
+          chargé.
+        </p>
+      </li>
+
+    </ol>
+  </section>
+
+  <section class="section section--mesure" id="mesure">
+    <h2 class="titre">Ce que j’ai mesuré</h2>
+    <p class="chapo">
+      Je ne mets en avant qu’une seule preuve chiffrée, celle-ci. Elle vient du site SenseLab,
+      relevée dans le navigateur avant et après mon travail, sur le site construit et non sur une
+      page de test. Tout ce que je ne peux pas mesurer, je ne l’écris pas.
+    </p>
+
+    <dl class="mesures">
+      <div>
+        <dt>Poids de la page d’accueil</dt>
+        <dd><b>8 257</b> Ko <i>devenus</i> <b>1 989</b> Ko</dd>
+      </div>
+      <div>
+        <dt>Premier affichage, en local</dt>
+        <dd><b>3,5</b> s <i>devenues</i> <b>0,74</b> s</dd>
+      </div>
+      <div>
+        <dt>En production, sur un téléphone en 4G bridée</dt>
+        <dd><b>1,27</b> s</dd>
+      </div>
+    </dl>
+
+    <p class="note">
+      Pourquoi j’insiste là-dessus&nbsp;: ici, un visiteur paie sa connexion. Une page lourde n’est
+      pas un défaut technique, c’est un client qui ferme l’onglet avant d’avoir vu votre offre.
+    </p>
+  </section>
+
+  <section class="section" id="atelier">
+    <h2 class="titre">D’où je viens</h2>
+    <ul class="parcours">
+      <li>
+        <span class="parcours__quoi">Licence en Systèmes Informatiques et Logiciels</span>
+        <span class="parcours__ou">Mémoire soutenu sur la plateforme StyleAfrik</span>
+      </li>
+      <li>
+        <span class="parcours__quoi">Co-fondateur, Directeur des Opérations et du Développement Commercial</span>
+        <span class="parcours__ou">SenseLab, ingénierie logicielle, Cotonou</span>
+      </li>
+      <li>
+        <span class="parcours__quoi">Directeur du Développement Commercial</span>
+        <span class="parcours__ou">Mon Ventre D’Abord, pâtisserie</span>
+      </li>
+      <li>
+        <span class="parcours__quoi">Stage, systèmes d’information et support</span>
+        <span class="parcours__ou">Loterie Nationale du Bénin</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section section--contact" id="contact">
+    <h2 class="titre">Parlons-en</h2>
+    <p class="chapo">
+      Dites-moi ce qui ne va pas aujourd’hui dans votre activité. Si je ne suis pas la bonne
+      personne, je vous le dirai, et je vous dirai qui l’est.
+    </p>
+
+    <a class="bande bande--bas" href="https://wa.me/2290155016669">
+      <span class="bande__mot">WhatsApp</span>
+      <span class="bande__num">+229 01 55 01 66 69</span>
+    </a>
+
+    <ul class="autres">
+      <li><a href="mailto:akowanoudeogratias0@gmail.com">akowanoudeogratias0@gmail.com</a></li>
+      <li><a href="https://github.com/Deogratias007" rel="noopener">github.com/Deogratias007</a></li>
+      <li>Akpakpa Kpondéhou, Cotonou, Bénin</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <p>Déo-Gratias AKOWANOU · Cotonou, Bénin · <span id="annee">2026</span></p>
+</footer>
+
+<a class="rappel" href="https://wa.me/2290155016669" hidden>Écrire sur WhatsApp</a>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
-
